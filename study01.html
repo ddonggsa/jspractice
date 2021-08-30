@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang ="ko">
+<head>
+    <meta charset ="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box,content-box;
+        }
+        body{
+            font-family:Arial,Helvetica,sans-serif;
+            margin: 0; 
+        }
+        .header{
+            padding: 80px;
+            text-align:center;
+            background: #84cac1; 
+            color:black;
+        }
+        .header h1{
+            font-size:40px;
+        }
+        .navbar{
+            overflow:hidden;
+            background-color:#333;
+            position:sticky;
+            position: -webkit-sticky;
+            top:0;
+        }
+        .navbar a{
+            float:left;
+            display:block;
+            color:white;
+            text-align:center;
+            padding: 14px 20px;
+            text-decoration:none;
+        }
+        .navbar a.right{
+            float:right;
+        }
+        .navbar a:hover{
+            background-color: rgba(221, 221, 221, 0.692);
+            color:black;
+        }
+        .navbar a.active{
+            background-color:#666;
+            color:white;
+        }
+
+        .row{
+            display:-ms-flexbox; /* IE 10*/
+            display:flex;
+            -ms-flex-wrap:wrap; /*IE 10*/
+            flex-wrap: wrap;
+        }
+
+        .aside{
+            flex: 30%;
+            background-color:#f1f1f1;
+            padding: 20px;
+        }
+
+        .main{
+            flex: 70%;
+            background-color:white;
+            padding:20px;
+        }
+
+        .footer{
+            padding: 20px;
+            text-align:center;
+            background-color:#ddd;
+        }
+
+        @media screen and(max-width: 700px){
+            .row{
+                flex-direction: column;
+            }
+        
+        @media screen and(max-width: 400px){
+            .navbar a{
+                float:none;
+                width:100%;
+            }
+        }
+        }
+
+    </style>
+</head>
+<body>
+        <div class ="header">
+            <h1>내 웹사이트</h1>
+            <p>내반응형 웹사이트</p>
+        </div>
+        <div class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#" class="right">Link</a>
+        </div>
+        <div class="row">
+            <div class="aside">
+                <h2>About me</h2>
+                <h5>내 사진</h5>
+                <img src="https://picsum.photos/470/200">
+                <p>나에대한 텍스트</p>
+                <h3>더 많은 텍스트</h3>
+                <p>사이드 예시화면 입니다.</p>
+                <img src="https://picsum.photos/470/60">
+                <img src="https://picsum.photos/470/60">
+                <img src="https://picsum.photos/470/60">
+            </div>
+            <div class="main">
+                <h2>타이틀</h2>
+                <h5>타이틀, 설명, 날짜</h5>
+                <img src="https://picsum.photos/1150/200">
+                <p>텍스트..</p>
+                <p>사진에 대한 설명..</p>
+                <br>
+                <h2>타이틀</h2>
+                <h5>타이틀, 설명, 날짜</h5>
+                <img src="https://picsum.photos/1150/200">
+                <p>텍스트..</p>
+                <p>사진에 대한 설명..</p>
+            </div>
+        </div>
+        <div class ="footer">
+            <h2>Footer</h2>
+        </div>
+        
+</body>
+</html>
